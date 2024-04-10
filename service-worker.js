@@ -1,11 +1,14 @@
 const CACHE_NAME = 'v1';
+const basePath = '/pwatest';
+
 const urlsToCache = [
-  './',
-  './index.html',
-  './static/js/bundle.js', // You might need to adjust this depending on your build output
-  './static/js/0.chunk.js', // Include other generated JS files
-  './static/js/main.chunk.js', // Include other generated JS files
+  basePath + '/',
+  basePath + '/index.html',
+  basePath + '/static/js/bundle.js',
+  basePath + '/static/js/0.chunk.js',
+  basePath + '/static/js/main.chunk.js',
   // Add other resources that you want to cache
+  // Note: Use basePath before each resource path
 ];
 
 self.addEventListener('install', event => {
